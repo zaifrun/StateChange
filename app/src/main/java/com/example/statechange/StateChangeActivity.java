@@ -23,9 +23,19 @@ public class StateChangeActivity extends Activity {
 		Button saveButton = (Button) findViewById(R.id.saveButton);
 		//get a reference to our editText from xml
 		final EditText editName = (EditText) findViewById(R.id.editName);
-
-		//initialize our text field
 		final TextView textView = (TextView) findViewById(R.id.name);
+
+
+		if (savedInstanceState!=null)
+		{
+			String str = savedInstanceState.getString("savedName");
+			if (str!=null) //not null, so something was saved
+				name = str;
+			//we need to set the text field
+			//try to comment the above line out and
+			//see the effect after orientation change (after saving some name)
+		}
+		//initialize our text field
         textView.setText("Saved Name:"+name);
 
 		//add a click listener to our save button
@@ -71,7 +81,7 @@ public class StateChangeActivity extends Activity {
 		Log.i(TAG, "onDestroy");
 	}
 
-	//This method is called before our activity is created
+	//This method is called before our activity is destroyed
 	protected void onSaveInstanceState(Bundle outState) {
 		//ALWAYS CALL THE SUPER METHOD
 		super.onSaveInstanceState(outState);
@@ -83,6 +93,8 @@ public class StateChangeActivity extends Activity {
 	//this is called when our activity is recreated, but
 	//AFTER our onCreate method has been called
 	//EXTREMELY IMPORTANT DETAIL
+	//This is an alternative place to restore the data
+	//This can also be done in the onCreate method like in the book.
 	protected void onRestoreInstanceState(Bundle savedState) {
 		//MOST UI elements will automatically store the information
 		//if we call the super.onRestoreInstaceState
@@ -99,7 +111,7 @@ public class StateChangeActivity extends Activity {
 		//we need to set the text field
 		//try to comment the line out and
 		//see the effect after orientation change (after saving some name)
-		savedName.setText("Saved Name:"+name);
+		//savedName.setText("Saved Name:"+name);
 
 	}
 
