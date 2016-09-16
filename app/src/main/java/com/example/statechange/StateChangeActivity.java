@@ -24,6 +24,17 @@ public class StateChangeActivity extends Activity {
 		//get a reference to our editText from xml
 		final EditText editName = (EditText) findViewById(R.id.editName);
 
+		//Alternatively you can also get access to your saved data
+		//in the onCreate method - you would need to do something
+		//like this - here commented out:
+		/*if (savedInstanceState!=null)
+		{
+			String saved = savedInstanceState.getString("savedName");
+			if (saved!=null) //did we save something
+				name = saved;
+
+		}*/
+
 		//initialize our text field
 		final TextView textView = (TextView) findViewById(R.id.name);
         textView.setText("Saved Name:"+name);
