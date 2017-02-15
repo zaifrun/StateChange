@@ -27,7 +27,7 @@ public class StateChangeActivity extends Activity {
 		//Alternatively you can also get access to your saved data
 		//in the onCreate method - you would need to do something
 		//like this - here commented out:
-		/*if (savedInstanceState!=null)
+	/*	if (savedInstanceState!=null)
 		{
 			String saved = savedInstanceState.getString("savedName");
 			if (saved!=null) //did we save something
@@ -91,12 +91,12 @@ public class StateChangeActivity extends Activity {
 	//This method is called before our activity is created
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
-		//ALWAYS CALL THE SUPER METHOD
+		//ALWAYS CALL THE SUPER METHOD - To be nice!
 		super.onSaveInstanceState(outState);
 		Log.i(TAG, "onSaveInstanceState");
 		/* Here we put code now to save the state */
 		outState.putString("savedName", name);
-		
+
 	}
 	//this is called when our activity is recreated, but
 	//AFTER our onCreate method has been called
@@ -118,7 +118,7 @@ public class StateChangeActivity extends Activity {
 		//we need to set the text field
 		//try to comment the line below out and
 		//see the effect after orientation change (after saving some name)
-		savedName.setText("Saved Name:"+name);
+	//	savedName.setText("Saved Name:"+name);
 
 	}
 
