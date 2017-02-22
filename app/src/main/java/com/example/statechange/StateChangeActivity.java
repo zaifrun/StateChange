@@ -18,7 +18,7 @@ public class StateChangeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_change);
-        Log.i(TAG, "onCreate");
+        Log.d(TAG, "onCreate");
 		//get a reference for our save button from xml
 		Button saveButton = (Button) findViewById(R.id.saveButton);
 		//get a reference to our editText from xml
@@ -27,6 +27,8 @@ public class StateChangeActivity extends Activity {
 		//Alternatively you can also get access to your saved data
 		//in the onCreate method - you would need to do something
 		//like this - here commented out:
+		//I actually recommend doing the restore in the onCreate
+		//method instead of in the onRestoreInstanceState method
 	/*	if (savedInstanceState!=null)
 		{
 			String saved = savedInstanceState.getString("savedName");
@@ -55,45 +57,45 @@ public class StateChangeActivity extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		Log.i(TAG, "onStart");
+		Log.d(TAG, "onStart");
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		Log.i(TAG, "onResume");
+		Log.d(TAG, "onResume");
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		Log.i(TAG, "onPause");
+		Log.d(TAG, "onPause");
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		Log.i(TAG, "onStop");
+		Log.d(TAG, "onStop");
 	}
 
 	@Override
 	protected void onRestart() {
 		super.onRestart();
-		Log.i(TAG, "onRestart");
+		Log.d(TAG, "onRestart");
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Log.i(TAG, "onDestroy");
+		Log.d(TAG, "onDestroy");
 	}
 
-	//This method is called before our activity is created
+	//This method is called before our activity is destoryed
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		//ALWAYS CALL THE SUPER METHOD - To be nice!
 		super.onSaveInstanceState(outState);
-		Log.i(TAG, "onSaveInstanceState");
+		Log.d(TAG, "onSaveInstanceState");
 		/* Here we put code now to save the state */
 		outState.putString("savedName", name);
 
@@ -107,7 +109,7 @@ public class StateChangeActivity extends Activity {
 		//if we call the super.onRestoreInstaceState
 		//but other data will be lost.
 		super.onRestoreInstanceState(savedState);
-		Log.i(TAG, "onRestoreInstanceState");
+		Log.d(TAG, "onRestoreInstanceState");
 		/*Here we restore any state */
 		TextView savedName = (TextView) findViewById(R.id.name);
 		//in the line below, notice key value matches the key from onSaved
@@ -118,7 +120,7 @@ public class StateChangeActivity extends Activity {
 		//we need to set the text field
 		//try to comment the line below out and
 		//see the effect after orientation change (after saving some name)
-	//	savedName.setText("Saved Name:"+name);
+		savedName.setText("Saved Name:"+name);
 
 	}
 
