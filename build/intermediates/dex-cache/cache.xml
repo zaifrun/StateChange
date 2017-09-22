@@ -11,14 +11,6 @@
         <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_73b314ff76d688a64182e117ec9cc1bfb4ee3e6f.jar" />
     </item>
     <item
-        jar="C:\Users\makn\android-sdks\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_43f5c8995048fbe6fd56955d4667029db8f5229c.jar" />
-    </item>
-    <item
         jar="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
@@ -27,13 +19,13 @@
         <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_786af49f0dabf1564508456a62dd87dfe677c666.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\makn\android-sdks\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_43f5c8995048fbe6fd56955d4667029db8f5229c.jar" />
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_660d8086265607f66fe6c87ba1236b8e55b9e237\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -51,6 +43,15 @@
         revision="23.0.2"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_73b314ff76d688a64182e117ec9cc1bfb4ee3e6f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4959c4d162e499671140fa124a0e437c663617d9">
+        <dex dex="C:\Users\makn\AndroidStudioProjects\course2016\StateChange\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_257d02c1eb056fa289c5d25e3f5ac6c962dd2801\classes.dex" />
     </item>
 
 </items>

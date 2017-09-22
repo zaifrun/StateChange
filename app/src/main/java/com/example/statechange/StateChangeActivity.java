@@ -29,13 +29,13 @@ public class StateChangeActivity extends Activity {
 		//like this - here commented out:
 		//I actually recommend doing the restore in the onCreate
 		//method instead of in the onRestoreInstanceState method
-	/*	if (savedInstanceState!=null)
+	if (savedInstanceState!=null)
 		{
 			String saved = savedInstanceState.getString("savedName");
 			if (saved!=null) //did we save something
 				name = saved;
 
-		}*/
+		}
 
 		//initialize our text field
 		final TextView textView = (TextView) findViewById(R.id.name);
@@ -111,16 +111,16 @@ public class StateChangeActivity extends Activity {
 		super.onRestoreInstanceState(savedState);
 		Log.d(TAG, "onRestoreInstanceState");
 		/*Here we restore any state */
-		TextView savedName = (TextView) findViewById(R.id.name);
+		//TextView savedName = (TextView) findViewById(R.id.name);
 		//in the line below, notice key value matches the key from onSaved
 		//this is of course EXTREMELY IMPORTANT
-		this.name = savedState.getString("savedName");
+		//this.name = savedState.getString("savedName");
 
 		//since this method is called AFTER onCreate
 		//we need to set the text field
 		//try to comment the line below out and
 		//see the effect after orientation change (after saving some name)
-		savedName.setText("Saved Name:"+name);
+		//savedName.setText("Saved Name:"+name);
 
 	}
 
