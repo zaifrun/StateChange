@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+//added more comments
 public class StateChangeActivity extends Activity {
 	//added comments
 
