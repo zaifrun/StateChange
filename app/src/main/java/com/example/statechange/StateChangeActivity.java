@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class StateChangeActivity extends Activity {
+	//added comments
 
 	private static final String TAG = "com.example.StateChange";
 	private String name = "";
